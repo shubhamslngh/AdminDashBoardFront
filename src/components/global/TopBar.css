@@ -1,0 +1,5 @@
+.avatar {
+  width: 62px; /* Adjust width as needed */
+  height: 62px; /* Adjust height as needed */
+  border-radius: 50%; /* Optional: Make the image round */
+}
