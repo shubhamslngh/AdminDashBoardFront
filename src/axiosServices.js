@@ -4,7 +4,7 @@ const apiService = {
     login: async (username, password) => {
         const response = await axiosInstance.post('/token/', {
             username,
-            password,R
+            password,
         });
         localStorage.setItem('token', response.data.access);
         localStorage.setItem('refresh_token', response.data.refresh);
