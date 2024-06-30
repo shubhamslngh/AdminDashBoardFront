@@ -24,7 +24,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-slate-500 to-teal-600">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300">
       <div className="max-w-md w-full bg-white p-8 border border-gray-300 rounded-lg shadow-lg backdrop-filter backdrop-blur-md bg-opacity-80">
         <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
           Register
@@ -86,10 +86,7 @@ const RegisterPage = () => {
             >
               Register
             </button>
-            <Link
-              to="/login"
-              className="text-blue-500 hover:underline"
-            >
+            <Link to="/login" className="text-blue-500 hover:underline">
               <button
                 type="submit"
                 className="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
