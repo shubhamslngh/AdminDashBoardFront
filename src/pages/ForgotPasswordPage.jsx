@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import apiService from "./axiosInstance"; // Adjust the import path as needed
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState("");
@@ -10,9 +10,7 @@ const ForgotPasswordPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://127.0.0.1:8000/api/accounts/password-reset/", {
-        email,
-      });
+      await apiService.forgotPassword(email);
       setMessage("Password reset email sent.");
       setError("");
     } catch (err) {

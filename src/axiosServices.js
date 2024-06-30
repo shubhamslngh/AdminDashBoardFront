@@ -33,7 +33,7 @@ const apiService = {
     },
 
     getPackage: async (id) => {
-        const response = await axiosInstance.get(`/packages/packages${id}/`);
+        const response = await axiosInstance.get(`/packages/packages/${id}/`);
         return response.data;
     },
 
@@ -43,17 +43,17 @@ const apiService = {
     },
 
     updatePackage: async (id, updatedPackage) => {
-        const response = await axiosInstance.put(`/packages/packages${id}/`, updatedPackage);
+        const response = await axiosInstance.put(`/packages/packages/${id}/`, updatedPackage);
         return response.data;
     },
 
     deletePackage: async (id) => {
-        const response = await axiosInstance.delete(`/packages/packages${id}/`);
+        const response = await axiosInstance.delete(`/packages/packages/${id}/`);
         return response.data;
     },
 
     createBooking: async (packageId, travelDate) => {
-        const response = await axiosInstance.post('/bookings/', {
+        const response = await axiosInstance.post('/bookings/bookings', {
             package: packageId,
             travel_date: travelDate,
         });
@@ -61,12 +61,12 @@ const apiService = {
     },
 
     getBookings: async () => {
-        const response = await axiosInstance.get('/bookings/');
+        const response = await axiosInstance.get('/bookings/bookings');
         return response.data;
     },
 
     getBooking: async (id) => {
-        const response = await axiosInstance.get(`/bookings/${id}/`);
+        const response = await axiosInstance.get(`/bookings/bookings/${id}/`);
         return response.data;
     },
 };
