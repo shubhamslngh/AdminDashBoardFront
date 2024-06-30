@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import apiService from "./axiosInstance"; // Adjust the import path as needed
 
 const RegisterPage = () => {
   const [username, setUsername] = useState("");
@@ -12,11 +12,7 @@ const RegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://127.0.0.1:8000/api/accounts/register/", {
-        username,
-        email,
-        password,
-      });
+      await apiService.register(username, email, password);
       navigate("/login");
     } catch (err) {
       setError("Failed to register. Please try again.");
@@ -87,12 +83,7 @@ const RegisterPage = () => {
               Register
             </button>
             <Link to="/login" className="text-blue-500 hover:underline">
-              <button
-                type="submit"
-                className="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              >
-                Login
-              </button>
+              Login
             </Link>
           </div>
         </form>
