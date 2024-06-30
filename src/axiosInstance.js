@@ -2,7 +2,7 @@ import axios from 'axios';
 import { jwtDecode } from 'jwt-decode'; // Correctly import the named export
 
 const axiosInstance = axios.create({
-    baseURL: 'http://34.134.64.208:8000/api',
+    baseURL: 'https://thsdashboard-uue5tgbgyq-uc.a.run.app/api',
     timeout: 5000,
     headers: {
         'Content-Type': 'application/json',
