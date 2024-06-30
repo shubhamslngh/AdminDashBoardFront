@@ -148,7 +148,7 @@ const Sidebar = ({ children }) => {
             />
             <Item
               title="Bookings"
-              to="/bookingPage"
+              to="/booking"
               icon={<CelebrationIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -201,4 +201,3 @@ const Sidebar = ({ children }) => {
 };
 
 export default Sidebar;
-  

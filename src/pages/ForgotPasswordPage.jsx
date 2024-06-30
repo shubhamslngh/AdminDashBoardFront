@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import apiService from "./axiosInstance"; // Adjust the import path as needed
+import apiService from "../axiosServices"; // Ensure this is the correct path to your API service
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState("");

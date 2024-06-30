@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { Box, Button, IconButton, useTheme } from "@mui/material";
 import { ColorModeContext, tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
@@ -8,6 +8,8 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../features/auth/authSlice";
 import "../global/TopBar.css";
 
 const Topbar = () => {
@@ -15,22 +17,17 @@ const Topbar = () => {
   const colors = tokens(theme.palette.mode);
   const { toggleColorMode } = useContext(ColorModeContext);
   const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    setIsLoggedIn(!!token); // Check if token exists
-  }, []);
+  const dispatch = useDispatch();
+  const token = useSelector((state) => state.auth.token);
 
   const handleToggleColorMode = () => {
     toggleColorMode();
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("refresh_token");
-    setIsLoggedIn(false);
+    dispatch(logout());
     navigate("/login"); // Redirect to login page
+     window.location.reload(); 
   };
 
   return (
@@ -71,7 +68,7 @@ const Topbar = () => {
             alt="User Avatar"
           />
         </IconButton>
-        {isLoggedIn ? (
+        {token ? (
           <Button color="inherit" onClick={handleLogout}>
             Logout
           </Button>
