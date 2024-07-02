@@ -15,7 +15,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { ColorModeContext, useMode } from './theme';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-import './index.css';
+import './index.scss';
 
 const theme = createTheme();
 

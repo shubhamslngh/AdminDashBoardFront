@@ -1,0 +1,126 @@
+.sidebar-container {
+    display: flex;
+    height: 100vh;
+    color: #66bb6a;
+    background-color: #000000;
+
+    .pro-sidebar-inner,
+    .pro-sidebar {
+        height: 100vh;
+        position: fixed;
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        opacity: 0.95;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+
+        .pro-menu-item {
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            margin: 5px;
+
+            &:hover {
+                color: #000000;
+                background-color: #f0f0f0;
+                border-radius: 10px;
+            }
+
+            &.active {
+                color: #ffffff !important;
+                background-color: #000000 !important;
+                border-radius: 10px;
+            }
+        }
+
+        .menu-toggle {
+            margin: 0px 0 10px 0;
+            color: #ffffff;
+
+            .logo-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-left: 15px;
+
+                .logo-title {
+                    font-size: 20px;
+                    color: #000000;
+                }
+
+                button {
+                    background: none;
+                    border: none;
+                    color: inherit;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .profile-section {
+            margin-bottom: 25px;
+            text-align: center;
+
+            .profile-image-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .profile-image {
+                    cursor: pointer;
+                    border-radius: 50%;
+                }
+            }
+
+            .profile-info {
+                .profile-name {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #100c0c;
+                    margin: 10px 0 0 0;
+                }
+
+                .profile-role {
+                    font-size: 14px;
+                    color: #66bb6a; // Adjust according to your theme
+                }
+            }
+        }
+
+        .pro-icon-wrapper {
+            border-radius: 10px;
+            background-color: transparent !important;
+        }
+
+        .pro-sidebar .pro-menu.shaped .pro-menu-item>.pro-inner-item>.pro-icon-wrapper {
+            background-color: transparent !important;
+        }
+
+        .menu-items {
+            padding-left: 10%;
+
+            .menu-section-title {
+                font-size: 16px;
+                color: #000000;
+                margin: 15px 0 5px 20px;
+            }
+        }
+    }
+
+    .pro-menu-item.menu-item.active {
+        background-color: #0569ff;
+    }
+
+    .content-area {
+        flex-grow: 1;
+        margin-left: 250px; // Default sidebar width
+        overflow-y: auto;
+        height: 100vh;
+        padding: 1.5rem;
+        background-color: #f0f2f5; // Adjust according to your theme
+        transition: margin-left 0.3s; // Smooth transition for expanding/collapsing sidebar
+    }
+
+    .content-area.collapsed {
+        margin-left: 80px; // Collapsed sidebar width
+    }
+}

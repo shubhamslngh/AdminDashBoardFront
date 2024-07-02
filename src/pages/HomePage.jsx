@@ -1,16 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import LineChart from "../components/LineChart";
+import WorldChart from "../components/WorldChart";
+import { WorldChartData } from "../components/WorldChartData";
+import {
+  mockWorldData,
+  mockLineData,
+  mockTopPlaces,
+} from "../components/mockData";
+import TopPlaces from "../components/TopPlaces";
+import "./HomePage.scss"; // Import the SCSS file
 
 const HomePage = () => {
   return (
-    <div className="container mx-auto">
-      <h1 className="text-4xl font-bold text-center mt-8">
-        Welcome to the Travel Booking Site
-      </h1>
-      <div className="text-center mt-4">
-        <Link to="/login" className="text-blue-500 hover:underline">
-          BookNow
-        </Link>
+    <div className="content-area">
+      <div className="homepage-container">
+        <div className="charts-container">
+          <div className="chart-item">
+            <LineChart data={mockLineData} />
+          </div>
+          <div className="chart-item top-places-container">
+            <TopPlaces places={mockTopPlaces} />
+          </div>
+        </div>
+        <div className="world-chart-container">
+          <WorldChart data={WorldChartData} />
+        </div>
       </div>
     </div>
   );

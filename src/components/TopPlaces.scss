@@ -1,0 +1,49 @@
+.top-places-container {
+    background-color: #ffffff; // Lighter background
+    padding: 2rem; // Increase padding for more spacing
+    border-radius: 10px; // Slightly more rounded corners
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Softer shadow for a subtle effect
+
+    h2 {
+        font-size: 2rem; // Bigger heading
+        font-weight: bold; // Bold heading
+        color: #333333; // Darker color for the heading
+        margin-bottom: 1.5rem; // More spacing below the heading
+        text-align: center; // Center the heading
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        .top-place-item {
+            display: flex; // Use flexbox for layout
+            justify-content: space-between; // Space between name and price
+            padding: 1rem 0; // Increase padding for list items
+            border-bottom: 1px solid #eeeeee; // Lighter border color
+            font-size: 0.8rem; // Larger font size for list items
+            color: #555555; // Darker color for list items
+            text-align: left; // Center align the list items
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover {
+                background-color: #f0f0f0; // Add a hover effect
+                cursor: pointer; // Change cursor to pointer
+            }
+
+            .place-name {
+                flex: 1; // Allow name to take up remaining space
+            }
+
+            .place-price {
+                flex-shrink: 0; // Prevent price from shrinking
+                margin-left: 1rem; // Add space between name and price
+                color: #ff5722; // Color for price
+                font-weight: bold; // Bold price
+            }
+        }
+    }
+}
