@@ -1,0 +1,40 @@
+.stats-card-with-line-chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #e0f7fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 350px;
+    height: 250px;
+
+    .card-content {
+        h3 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .title {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .trend {
+            font-size: 1rem;
+            color: #4caf50;
+        }
+
+        .description {
+            font-size: 0.875rem;
+            color: #666;
+        }
+    }
+
+    .line-chart-container {
+        height: 80px;
+        width: 100%;
+    }
+}

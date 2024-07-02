@@ -50,11 +50,11 @@
 }
 
   .chart-container {
-    
+    border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       padding: 1px;
       width: 500px;
       height: 300px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       background-color: rgb(243, 190, 190);
   } 
   

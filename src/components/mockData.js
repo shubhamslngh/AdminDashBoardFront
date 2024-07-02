@@ -24,6 +24,18 @@ export const mockLineData = [
     ],
   },
 ];
+export const mockLine1Data = {
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+  datasets: [
+    {
+      data: [30, 50, 45, 60, 70, 55, 80],
+      borderColor: "#66bb6a",
+      backgroundColor: "rgba(102, 187, 106, 0.1)",
+      fill: true,
+    },
+  ],
+};
+
 export const mockTopPlaces = [
   "Great Wall of China",
   "Machu Picchu",
