@@ -29,8 +29,9 @@ const Item = ({ title, to, icon, selected, setSelected, isCollapsed }) => {
 const Sidebar = ({ children }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [selected, setSelected] = useState("Dashboard");
+const profileImage = process.env.PUBLIC_URL + "/black.png";
 
-  const profileImage = "/black.png"; // Simplified for this example
+  // const profileImage = "/black.png"; 
 
   return (
     <div className="sidebar-container">
