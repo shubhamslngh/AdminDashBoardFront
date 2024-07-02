@@ -7,9 +7,12 @@
     margin-left: auto;
 }
 
+
 .stats-container {
     display: flex;
-    padding: 0.5rem 0.5rem;
+    padding: 2.5rem 2rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .charts-container {
