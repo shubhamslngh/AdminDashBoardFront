@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../features/auth/authSlice";
 import "./TopBar.scss"; // Import the SCSS file
+import Header from "../../components/Header";
 
 const Topbar = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Topbar = () => {
 
   return (
     <div className="topbar place-items-end">
-      {/* SEARCH BAR */}
+      {/* <Header/> */}
       <div className="searh-bar ">
        
       </div>

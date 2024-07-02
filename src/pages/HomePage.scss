@@ -2,16 +2,21 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width:auto;
+    width: 100%;
     padding: 1rem;
-    margin-left:auto;
+    margin-left: auto;
+}
+
+.stats-container {
+    display: flex;
+    padding: 0.5rem 0.5rem;
 }
 
 .charts-container {
     display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
     height: 50vh;
-    width: 100%;
-    padding: 30px;
     margin-bottom: 1rem;
 }
 
@@ -31,8 +36,9 @@
 }
 
 .top-places-container {
-    padding: 1;
-    overflow-y: scroll;
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
 }
 
 .world-chart-container {
@@ -41,8 +47,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(0, 0, 0);
-    box-shadow: rgb(120, 120, 120);
-    border-radius: 8px;
+    border: 1px solid #ddd;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 1rem 2rem;
 }

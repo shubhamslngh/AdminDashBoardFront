@@ -40,7 +40,7 @@ const BookingPage = () => {
           New Booking
         </button>
       </div>
-      {bookingsStatus === "loading" && <div>Loading...</div>}
+      {bookingsStatus === "loading" && <div><h1>Session Expired!</h1><h3>Please login to Access!!!</h3></div>}
       {bookingsStatus === "succeeded" && (
         <DataTable
           rows={bookings}

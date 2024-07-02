@@ -4,7 +4,7 @@ import './TopPlaces.scss'; // Import the SASS file for styling
 
 const TopPlaces = ({ places }) => {
     return (
-        <div className="top-places-container">
+        <div className="top-places-containe h-full w-full">
             <h2>Top Places</h2>
             <ul>
                 {places.map((place, index) => (

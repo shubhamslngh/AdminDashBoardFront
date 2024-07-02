@@ -35,7 +35,7 @@ const LoginPage = ({ setIsLoggedIn }) => {
   <div className="max-w-md w-full bg-white p-8 border border-gray-300 rounded-lg shadow-lg backdrop-filter backdrop-blur-md bg-opacity-80">
     <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
 
-          Login
+          Please Login to Continue
         </h2>
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
         <form onSubmit={handleSubmit}>

@@ -1,0 +1,28 @@
+.charts-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    height: 50vh;
+    margin-bottom: 1rem;
+
+    .chart-item {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-right: 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .top-places-container {
+        flex: 1;
+        padding: 1rem;
+        overflow-y: auto;
+    }
+}

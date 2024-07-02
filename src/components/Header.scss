@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    
+
+    .welcome-message {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .search-notification {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-notification input {
+        padding: 0.5rem;
+        margin-right: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+    }
+
+          .avatar {
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              object-fit: cover;
+          }
+    .icons .icon {
+        margin-left: 1rem;
+        cursor: pointer;
+    }
+}
