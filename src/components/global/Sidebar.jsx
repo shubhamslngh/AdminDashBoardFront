@@ -12,7 +12,7 @@ import BusinessOutlinedIcon from "@mui/icons-material/BusinessOutlined";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 import CelebrationIcon from "@mui/icons-material/Celebration";
 
-const Item = ({ title, to, icon, selected, setSelected }) => {
+const Item = ({ title, to, icon, selected, setSelected, isCollapsed }) => {
   return (
     <MenuItem
       active={selected === title}
@@ -20,7 +20,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       onClick={() => setSelected(title)}
       icon={icon}
     >
-      <span>{title}</span>
+      {!isCollapsed && <span>{title}</span>}
       <Link to={to} />
     </MenuItem>
   );
@@ -39,7 +39,7 @@ const Sidebar = ({ children }) => {
           {/* LOGO AND MENU ICON */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
-            icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+            icon={<MenuOutlinedIcon />}
             className="menu-toggle"
           >
             {!isCollapsed && (
@@ -77,14 +77,20 @@ const Sidebar = ({ children }) => {
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
+              isCollapsed={isCollapsed}
             />
-            <span className="menu-section-title">Master</span>
+            <span
+              className={`menu-section-title ${isCollapsed ? "hidden" : ""}`}
+            >
+              Master
+            </span>
             <Item
               title="Packages"
               to="/packages"
               icon={<BusinessOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
+              isCollapsed={isCollapsed}
             />
             <Item
               title="Bookings"
@@ -92,6 +98,7 @@ const Sidebar = ({ children }) => {
               icon={<CelebrationIcon />}
               selected={selected}
               setSelected={setSelected}
+              isCollapsed={isCollapsed}
             />
             <Item
               title="Cancel Reasons"
@@ -99,6 +106,7 @@ const Sidebar = ({ children }) => {
               icon={<CancelPresentationOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
+              isCollapsed={isCollapsed}
             />
             <Item
               title="Media Type"
@@ -106,6 +114,7 @@ const Sidebar = ({ children }) => {
               icon={<MovieOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
+              isCollapsed={isCollapsed}
             />
             <Item
               title="Address Type"
@@ -113,6 +122,7 @@ const Sidebar = ({ children }) => {
               icon={<BusinessOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
+              isCollapsed={isCollapsed}
             />
             <Item
               title="Trips"
@@ -120,6 +130,7 @@ const Sidebar = ({ children }) => {
               icon={<LocalOfferOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
+              isCollapsed={isCollapsed}
             />
           </div>
         </Menu>

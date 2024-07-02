@@ -88,6 +88,7 @@
 
         .pro-icon-wrapper {
             border-radius: 10px;
+            color:#0569ff;
             background-color: transparent !important;
         }
 
@@ -112,7 +113,7 @@
 
   .pro-sidebar-inne, .sidebar-container, .content-area {
         flex-grow: 1;
-        margin-left: 250px; // Default sidebar width
+        margin-left: 270px; // Default sidebar width
         overflow-y: auto;
         height: 100vh;
         padding: 1rem;
@@ -120,7 +121,7 @@
         transition: margin-left 0.3s; // Smooth transition for expanding/collapsing sidebar
 
         &.collapsed {
-            margin-left: 150px; 
+            margin-left: 55px; 
             width:10%;
         }
     }

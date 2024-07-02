@@ -22,17 +22,16 @@ const BookingPage = () => {
     { field: "booking_date", headerName: "DATE of BOOKING", width: 150 },
     { field: "travel_date", headerName: "Travel date", width: 150 },
     { field: "status", headerName: "Status", width: 150 },
-    // Add more columns as needed
   ];
 
   const handleNewBooking = () => {
-    navigate('/new-booking'); // Adjust the path as needed
+    navigate('/new-booking'); 
   };
 
   return (
     <div style={{ height: 400, width: "100%" }}>
-      <div className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-bold">Bookings</h1>
+      <div className="flex justify-between items-center p-10 mb-4">
+        <h1 className="text-2xl place-items-start font-bold">Bookings</h1>
         <button
           onClick={handleNewBooking}
           className="bg-blue-500 text-white px-4 py-2 rounded"
@@ -40,12 +39,12 @@ const BookingPage = () => {
           New Booking
         </button>
       </div>
-      {bookingsStatus === "loading" && <div><h1>Session Expired!</h1><h3>Please login to Access!!!</h3></div>}
+      {bookingsStatus === "loading" && <div><h3>Please login to Access!!!</h3></div>}
       {bookingsStatus === "succeeded" && (
         <DataTable
           rows={bookings}
           columns={columns}
-          initialHiddenColumns={[]} // Add this line to specify any initial hidden columns
+          initialHiddenColumns={[]} 
         />
       )}
       {bookingsStatus === "failed" && <div>{error}</div>}
