@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import apiService from "../axiosServices"; // Ensure this is the correct path to your API service
+import styles from "./RegisterPage.module.scss"; // Import the SCSS module
 
 const RegisterPage = () => {
   const [username, setUsername] = useState("");
@@ -20,71 +21,59 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300">
-      <div className="max-w-md w-full bg-white p-8 border border-gray-300 rounded-lg shadow-lg backdrop-filter backdrop-blur-md bg-opacity-80">
-        <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
-          Register
-        </h2>
-        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <h2 className={styles.title}>Register</h2>
+        {error && <p className={styles.error}>{error}</p>}
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label
-              htmlFor="username"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
+          <div className={styles.mb4}>
+            <label htmlFor="username" className={styles.label}>
               Username
             </label>
             <input
               type="text"
               id="username"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className={styles.input}
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
             />
           </div>
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
+          <div className={styles.mb4}>
+            <label htmlFor="email" className={styles.label}>
               Email
             </label>
             <input
               type="email"
               id="email"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className={styles.input}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <div className="mb-6">
-            <label
-              htmlFor="password"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
+          <div className={styles.mb6}>
+            <label htmlFor="password" className={styles.label}>
               Password
             </label>
             <input
               type="password"
               id="password"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className={styles.input}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
-          <div className="flex items-center justify-between">
-            <button
-              type="submit"
-              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
+          <div className={styles.flex}>
+            <button type="submit" className={styles.button}>
               Register
             </button>
-            <Link to="/login" className="text-blue-500 hover:underline">
-              Login
-            </Link>
+            <button type="submit" className={styles.button}>
+              <Link to="/login" className={styles.button}>
+                Login
+              </Link>
+            </button>
           </div>
         </form>
       </div>

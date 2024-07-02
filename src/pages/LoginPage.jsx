@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import apiService from "../axiosServices"; // Ensure this is the correct path to your API service
+import styles from "./LoginPage.module.scss";
 
 const LoginPage = ({ setIsLoggedIn }) => {
   const [username, setUsername] = useState("");
@@ -31,63 +32,50 @@ const LoginPage = ({ setIsLoggedIn }) => {
   };
 
   return (
-   <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300">
-  <div className="max-w-md w-full bg-white p-8 border border-gray-300 rounded-lg shadow-lg backdrop-filter backdrop-blur-md bg-opacity-80">
-    <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
-
-          Please Login to Continue
-        </h2>
-        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <h2 className={styles.title}>Please Login or Register</h2>
+        {error && <p className={styles.error}>{error}</p>}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label
-              htmlFor="username"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
+            <label htmlFor="username" className={styles.label}>
               Username
             </label>
             <input
               type="text"
               id="username"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Username"
+              className={styles.input}
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
             />
           </div>
           <div className="mb-6">
-            <label
-              htmlFor="password"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
+            <label htmlFor="password" className={styles.label}>
               Password
             </label>
             <input
               type="password"
               id="password"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Password"
+              className={styles.input}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
           <div className="flex items-center justify-between">
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
+            <button type="submit" className={styles.button}>
               Login
             </button>
           </div>
-          <div className="mt-4 text-center">
-            <Link to="/register" className="text-blue-500 hover:underline">
+          <div className={styles.links}>
+            <Link to="/register" className={styles.link}>
               Register
             </Link>
-            <span className="mx-2 text-gray-500">|</span>
-            <Link
-              to="/forgot-password"
-              className="text-blue-500 hover:underline"
-            >
+            <span className={styles.separator}>|</span>
+            <Link to="/forgot-password" className={styles.link}>
               Forgot Password?
             </Link>
           </div>
