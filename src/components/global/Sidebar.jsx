@@ -27,7 +27,7 @@ const Item = ({ title, to, icon, selected, setSelected, isCollapsed }) => {
 };
 
 const Sidebar = ({ children }) => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [selected, setSelected] = useState("Dashboard");
 
   const profileImage = "/black.png"; // Simplified for this example
