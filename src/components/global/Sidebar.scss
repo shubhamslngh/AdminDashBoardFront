@@ -10,9 +10,9 @@
         position: fixed;
         background-color: #ffffff;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        opacity: 0.95;
-        border: 1px solid #ddd;
-        border-radius: 10px;
+        opacity: 1;
+        border: 1px solid rgb(219, 217, 217);
+        border-radius: 6px;
 
         .pro-menu-item {
             color: rgb(0, 0, 0);
@@ -110,17 +110,18 @@
         background-color: #0569ff;
     }
 
-    .content-area {
+  .pro-sidebar-inne, .sidebar-container, .content-area {
         flex-grow: 1;
         margin-left: 250px; // Default sidebar width
         overflow-y: auto;
         height: 100vh;
-        padding: 1.5rem;
+        padding: 1rem;
         background-color: #f0f2f5; // Adjust according to your theme
         transition: margin-left 0.3s; // Smooth transition for expanding/collapsing sidebar
-    }
 
-    .content-area.collapsed {
-        margin-left: 80px; // Collapsed sidebar width
+        &.collapsed {
+            margin-left: 150px; 
+            width:10%;
+        }
     }
 }

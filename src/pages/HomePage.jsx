@@ -8,7 +8,7 @@ import {
   mockTopPlaces,
 } from "../components/mockData";
 import TopPlaces from "../components/TopPlaces";
-import "./HomePage.scss"; // Import the SCSS file
+import "./HomePage.scss"; 
 
 const HomePage = () => {
   return (
