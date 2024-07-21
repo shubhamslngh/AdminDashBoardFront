@@ -1,6 +1,7 @@
 import React from 'react';
-import { getRandomPrice } from '../utils';
+// import getRandomPrice  from '../utils';
 import './TopPlaces.scss'; // Import the SASS file for styling
+const { getRandomPrice } = require('../utils');
 
 const TopPlaces = ({ places }) => {
     return (

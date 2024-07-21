@@ -10,8 +10,8 @@ const LoginPage = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
+    const token = localStorage.getItem("token");//fake Login we need to connect to cloud
+    if (!token) {
       setIsLoggedIn(true);
       navigate("/"); // Redirect to homepage or another page
     }
