@@ -21,7 +21,7 @@
 
             &:hover {
                 color: #000000;
-                background-color: #f0f0f0;
+                background-color: #3f3e3eac;
                 border-radius: 10px;
             }
 
@@ -67,7 +67,7 @@
 
                 .profile-image {
                     cursor: pointer;
-                    border-radius: 50%;
+                    border-radius: 20%;
                 }
             }
 
@@ -88,8 +88,12 @@
 
         .pro-icon-wrapper {
             border-radius: 10px;
-            color:#0569ff;
+            color:#850000;
             background-color: transparent !important;
+           
+            &:active {
+                color: #ff0000;
+            }
         }
 
         .pro-sidebar .pro-menu.shaped .pro-menu-item>.pro-inner-item>.pro-icon-wrapper {
@@ -106,7 +110,9 @@
             }
         }
     }
-
+  .pro-item-content .logo-container button {
+      display: none;
+  }
     .pro-menu-item.menu-item.active {
         background-color: #0569ff;
     }

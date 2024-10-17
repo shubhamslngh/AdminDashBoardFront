@@ -16,6 +16,7 @@ import store from './store';
 import { ColorModeContext, useMode } from './theme';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import './index.scss';
+import Contacts from './pages/Contacts';
 
 const theme = createTheme();
 
@@ -68,6 +69,14 @@ function App() {
                     element={
                       <ProtectedRoute isLoggedIn={isLoggedIn}>
                         <BookingPage />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/Contacts"
+                    element={
+                      <ProtectedRoute isLoggedIn={isLoggedIn}>
+                        <Contacts />
                       </ProtectedRoute>
                     }
                   />

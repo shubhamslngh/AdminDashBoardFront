@@ -17,6 +17,7 @@ import {
   DialogContentText,
   DialogTitle,
 } from "@mui/material";
+import Header from "../components/Header";
 
 const PackagesPage = () => {
   const dispatch = useDispatch();
@@ -84,12 +85,32 @@ const PackagesPage = () => {
     return <div>Loading...</div>;
   }
 
-  if (status === "failed") {
-    return <div>Error: {error}</div>;
-  }
+if (status === "failed") {
+  return (
+      <Box p={6}>
+      <Header title="Packages" subtitle="State Management using REDUX, you can check out GitHub for reference or use DevTOOLS"/>
+    <div
+      style={{
+        padding: "60px",
+        backgroundColor: "#f8d7da",
+        color: "#721c24",
+        border: "1px solid #f5c6cb",
+        borderRadius: "5px",
+        }}>
+        <h1>Protected Routes Auth Disabled </h1>
+      <h2>Error: Google Cloud Service Unavailable</h2>
+      <p>
+        It appears Google Cloud services are currently down due to a payment
+        issue. Please try again later or contact support.
+      </p>
+      </div>
+      </Box>
+  );
+}
+
 
   return (
-    <Box p={3}>
+    <Box p={6}>
       <h1>Packages</h1>
       <Button
         variant="contained"
@@ -154,7 +175,7 @@ const PackagesPage = () => {
           </Button>
         </DialogActions>
       </Dialog>
-    </Box>
+      </Box>
   );
 };
 

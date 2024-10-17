@@ -1,87 +1,54 @@
 .topbar {
+  background-color: #fff;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  place-items: end;
-  padding: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-  .search-bar {
-    display: flex;
-    align-items:flex-end;
-    height: 50px;
-    background-color: #ffffff;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-
-    .search-input {
-      flex: 1;
-      border: none;
-      padding: 0 10px;
-      border-radius: 4px 0 0 4px;
-      outline: none;
-    }
-
-    .icon-button {
-      padding: 0 10px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-
-      i {
-        font-size: 20px;
-        color: #333333;
-      }
-    }
-  }
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 
   .icons {
     display: flex;
     align-items: center;
-    color: #000000;
-    
+    gap: 10px;
 
     .icon-button {
-      padding: 10px;
       background: none;
       border: none;
       cursor: pointer;
-      margin-left: 10px;
-      display: flex;
-      align-items: center;
-    color: #000000;
+      font-size: 1.5rem;
+      color: #333;
 
-      i {
-        font-size: 20px;
-        color: #333333;
-      }
-
-      .avatar {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        object-fit: cover;
+      &:hover {
+        color: #000;
       }
     }
 
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
     .btn {
-      margin-left: 10px;
       padding: 5px 10px;
+      font-size: 1rem;
       border: none;
       cursor: pointer;
-      border-radius: 4px;
+      border-radius: 5px;
+      color: #fff;
 
-      &.btn-logout {
-        background-color: #e57373;
-        color: #ffffff;
+      &-logout {
+        background-color: #ff4d4f;
       }
 
-      &.btn-login {
-        background-color: #64b5f6;
-        color: #ffffff;
+      &-login {
+        background-color: #4caf50;
+      }
+
+      &:hover {
+        opacity: 0.8;
       }
     }
   }

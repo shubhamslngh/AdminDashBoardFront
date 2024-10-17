@@ -29,7 +29,9 @@ const Item = ({ title, to, icon, selected, setSelected, isCollapsed }) => {
 const Sidebar = ({ children }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [selected, setSelected] = useState("Dashboard");
-const profileImage = process.env.PUBLIC_URL + "/black.png";
+  // const profileImage = process.env.PUBLIC_URL + "/black.png";
+  const profileImage =
+    "https://st.depositphotos.com/2247761/2438/i/950/depositphotos_24382501-stock-photo-african-american-man-profile-blank.jpg";
 
   // const profileImage = "/black.png"; 
 
@@ -41,8 +43,7 @@ const profileImage = process.env.PUBLIC_URL + "/black.png";
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={<MenuOutlinedIcon />}
-            className="menu-toggle"
-          >
+            className="menu-toggle">
             {!isCollapsed && (
               <div className="logo-container">
                 <span className="logo-title">THE HIMALYAN SQUAD</span>
@@ -81,8 +82,7 @@ const profileImage = process.env.PUBLIC_URL + "/black.png";
               isCollapsed={isCollapsed}
             />
             <span
-              className={`menu-section-title ${isCollapsed ? "hidden" : ""}`}
-            >
+              className={`menu-section-title ${isCollapsed ? "hidden" : ""}`}>
               Master
             </span>
             <Item
@@ -102,8 +102,8 @@ const profileImage = process.env.PUBLIC_URL + "/black.png";
               isCollapsed={isCollapsed}
             />
             <Item
-              title="Cancel Reasons"
-              to="/ListCancelReasons"
+              title="Contacts"
+              to="/Contacts"
               icon={<CancelPresentationOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -111,7 +111,7 @@ const profileImage = process.env.PUBLIC_URL + "/black.png";
             />
             <Item
               title="Media Type"
-              to="/ListMediaType"
+              to="/Contacts"
               icon={<MovieOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -119,7 +119,7 @@ const profileImage = process.env.PUBLIC_URL + "/black.png";
             />
             <Item
               title="Address Type"
-              to="/ListAddressType"
+              to="/Contacts"
               icon={<BusinessOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -127,7 +127,7 @@ const profileImage = process.env.PUBLIC_URL + "/black.png";
             />
             <Item
               title="Trips"
-              to="/listfoodtypes"
+              to="/Contacts"
               icon={<LocalOfferOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
