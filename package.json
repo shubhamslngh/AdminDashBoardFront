@@ -34,7 +34,6 @@
     "tailwind-merge": "^2.4.0",
     "tailwindcss": "^3.4.4",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.5.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -60,5 +59,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    // "typescript": "^4.9.5"
   }
 }
